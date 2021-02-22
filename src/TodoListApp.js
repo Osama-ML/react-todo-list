@@ -11,7 +11,7 @@ import { TodoListDone } from './TodoListDone';
 import './style.css';
 
 const init = () =>  {
-    return JSON.parse(localStorage.getItem('todos') || [])
+    return JSON.parse(localStorage.getItem('todos')) || []
 }
 
 export const TodoListApp = () => {
