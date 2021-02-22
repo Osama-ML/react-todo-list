@@ -20,7 +20,7 @@ export const todoReducer = (state = [], action) => {
             let edited = prompt(`Edit the task "${action.payload.desc}"`)
             
             if(edited === null || edited === ""){
-                return state.map(todo => (todo.id === action.payload.id) && {...todo})
+                return state;
             }else{
                 return state.map(todo => (todo.id === action.payload.id) ? {...todo, desc: edited} : todo)
             }
