@@ -5,12 +5,12 @@ export const TodoListDone = ({todos,handleDelete}) => {
         <div>
             <ul>
                 {
-                    (todos.filter(todo=> todo.done === true)).map((todo,i) => (
+                    ((todos.filter(todo=> todo.done === true)).reverse()).map((todo,i) => (
                         <li
                         key={todo.id}
                         >
                             <p>
-                                {i + 1}. {todo.desc}
+                                - {todo.desc}
                                 <button 
                                 className="button__Delete"
                                 onClick={() => handleDelete(todo.id)}>Delete</button>
